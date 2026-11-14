@@ -175,7 +175,7 @@ final class AppRuntime: ObservableObject {
     func handleOpenURL(_ url: URL) {
         record(.openedURL(url.absoluteString))
 
-        if url.scheme == "bitchat", url.host == "share" {
+        if url.scheme == "toothchat", url.host == "share" {
             checkForSharedContent()
         }
     }

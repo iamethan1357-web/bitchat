@@ -42,7 +42,7 @@ struct ContentHeaderView: View {
 
     var body: some View {
         HStack(spacing: 0) {
-            Text(verbatim: "bitchat/")
+            Text(verbatim: "ToothChat/")
                 .bitchatFont(size: 18, weight: .medium)
                 .lineLimit(1)
                 .foregroundColor(palette.primary)
@@ -70,7 +70,7 @@ struct ContentHeaderView: View {
                 // stays undiscoverable on purpose — it's destructive.)
                 .accessibilityAddTraits(.isButton)
                 .accessibilityHint(
-                    String(localized: "content.accessibility.app_info_hint", comment: "Accessibility hint on the bitchat/ logo explaining a tap opens app info")
+                    String(localized: "content.accessibility.app_info_hint", comment: "Accessibility hint on the ToothChat/ logo explaining a tap opens app info")
                 )
                 .accessibilityAction {
                     appChromeModel.presentAppInfo()
@@ -377,7 +377,7 @@ struct ContentHeaderView: View {
                 pendingShareGeohash = nil
             }
         } message: {
-            Text(String(localized: "channel.share.precision_warning.message", defaultValue: "this channel covers a small area. an invite sent over sms or imessage is visible to the carrier and both handsets — it discloses interest in that place, not only that someone uses bitchat.", comment: "Body of the confirmation before sharing a fine-precision geohash invite"))
+            Text(String(localized: "channel.share.precision_warning.message", defaultValue: "this channel covers a small area. an invite sent over sms or imessage is visible to the carrier and both handsets — it discloses interest in that place, not only that someone uses ToothChat.", comment: "Body of the confirmation before sharing a fine-precision geohash invite"))
         }
         .sheet(item: $activeSharePayload) { payload in
             ShareActivityView(text: payload.text)
